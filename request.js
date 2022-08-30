@@ -21,12 +21,12 @@ const objectToCsv = function (data) {
   return csvRows.join("\n");
 };
 const download = function (data) {
-  const blob = new Blob([data], { type: "text/text" });
+  const blob = new Blob([data], { type: "text/csv" });
   const url = window.URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.setAttribute("hidden", "");
   a.setAttribute("href", url);
-  a.setAttribute("download", "ExportedData.txt");
+  a.setAttribute("download", "ExportedData.csv");
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
@@ -50,7 +50,7 @@ const getReport = async function () {
   }
   console.log(today());
   console.log(inputdate);
-  fetch(`http://matjar.dyndns.org:3000/sales/${inputdate}`)
+  fetch(`http://matjar2.dyndns.org:3000/sales/${inputdate}`)
     .then((response) => response.json())
     .then((data) => {
       // console.log(data);
