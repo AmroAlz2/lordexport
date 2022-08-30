@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Export sales as text file</title>
+  </head>
+  <body>
+    <form class="form">
+      <div class="title">
+        <h2>ENTER THE DATE</h2>
+        <h4>with format "DD-MM-YY"</h4>
+      </div>
+      <div class="warp">
+        <input
+          class="dateInput"
+          id="dateInput"
+          type="text"
+          min="2022-01-01"
+          placeholder=" DD-MM-YY"
+          required
+        />
+        <button class="a" id="myButton" type="submit">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          DOWNLOAD
+        </button>
+      </div>
+      <!-- <button  type="submit" class="btn btn-primary btn-ghost">
+        Download
+      </button> -->
+    </form>
+
+    <script src="request.js" />
+  </body>
+</html>
