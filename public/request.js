@@ -8,7 +8,7 @@ const objectToCsv = function (data) {
   // loop over the rows
   for (const row of data) {
     const str = JSON.stringify(row);
-    sttr = str.substr(1); //remove frist character
+    const sttr = str.substr(1); //remove frist character
     let arString = sttr.slice(0, -1); //remove last character
     // remove double qouts
 
@@ -56,7 +56,7 @@ const getReport = async function () {
       // console.log(data);
 
       const csvData = objectToCsv(data);
-      console.log(csvData);
+      console.log("data recived");
 
       download(csvData);
     });
